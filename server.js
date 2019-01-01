@@ -24,8 +24,14 @@ app.post('/api/createTable', (req, res) => {
     dynamoDBController.createTable(result);
 });
 
+//=======================================
+app.post('/api/register', (req, res) => {
+    var result = { data: { data: 0 }, req: req, res: res };
+    dynamoDBController.register(result);
+})
+
 
 var port = process.env.PORT || 3010
-app.listen(port, function(){
-  console.log('Server listening on ', port);
+app.listen(port, function() {
+    console.log('Server listening on ', port);
 })
