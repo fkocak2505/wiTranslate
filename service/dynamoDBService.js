@@ -23,7 +23,18 @@ const register = (result, fnCallback) => {
 }
 
 //================================================================
+const login = (result, fnCallback) => {
+    var fResp = new FunctionResponse("login", [result, fnCallback]);
+    dynamoDBAdapter.login(result, fResp => {
+        if (fResp.err !== undefined) fResp.setErr(fResp.err)
+        else fResp.setData(fResp.data);
+        fnCallback(fResp);
+    })
+}
+
+//================================================================
 module.exports = {
     createTable,
-    register
+    register,
+    login
 }

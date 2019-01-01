@@ -30,6 +30,11 @@ app.post('/api/register', (req, res) => {
     dynamoDBController.register(result);
 })
 
+//=======================================
+app.post('/api/login', (req, res) => {
+    var result = { data: { data: 0 }, req: req, res: res };
+    dynamoDBController.login(result);
+})
 
 var port = process.env.PORT || 3010
 app.listen(port, function() {

@@ -2,3 +2,9 @@
 global.TablePrimaryKey = {
     Wi_USER: "userID"
 }
+
+//================================================================
+global.TableName = {
+    USER_TABLE: "Wi_USER"
+}
+
