@@ -18,12 +18,15 @@
   },
   "homepage": "https://github.com/fkocak2505/wiTranslate#readme",
   "dependencies": {
+    "async": "^2.6.1",
     "aws-sdk": "^2.382.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "fs": "0.0.1-security",
     "install": "^0.12.2",
     "moment": "^2.23.0",
+    "multer": "^1.4.1",
     "npm": "^6.5.0",
     "uuid": "^3.3.2"
   }
