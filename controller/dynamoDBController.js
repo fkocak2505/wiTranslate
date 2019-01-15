@@ -30,7 +30,7 @@ const register = (result) => {
 const login = (result) => {
     dynamoDBService.login(result, fResp => {
         if (fResp.err !== undefined) {
-            result.res.json({ success: false, error: fResp.err })
+            result.res.json({ success: false, data: fResp.err })
             result.res.status(404).end();
         } else {
             result.res.json({ success: true, data: fResp.data })
