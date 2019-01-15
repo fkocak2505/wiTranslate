@@ -43,7 +43,7 @@ const register = (result, fnCallback) => {
     var registerObj = result.req.body;
     var email = registerObj.email;
     var password = registerObj.password;
-    var userUUID = uuidv1();
+    var userUUID = registerObj.uuid;
 
     var paramOfRegister = {
         TableName: TableName.USER_TABLE,
