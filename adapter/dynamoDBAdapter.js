@@ -53,7 +53,7 @@ const register = (result, fnCallback) => {
             "userID": userUUID,
             "email": email,
             "password": password,
-            "name": nameSurname,
+            "nameSurname": nameSurname,
             "birthday": birthday,
             "registerDate": moment().format('YYYY/MM/DD-HH:mm:ss')
         }
