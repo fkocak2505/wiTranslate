@@ -44,6 +44,8 @@ const register = (result, fnCallback) => {
     var email = registerObj.email;
     var password = registerObj.password;
     var userUUID = registerObj.uuid;
+    var nameSurname = registerObj.nameSurname;
+    var birthday = registerObj.birthday;
 
     var paramOfRegister = {
         TableName: TableName.USER_TABLE,
@@ -51,6 +53,8 @@ const register = (result, fnCallback) => {
             "userID": userUUID,
             "email": email,
             "password": password,
+            "name": nameSurname,
+            "birthday": birthday,
             "registerDate": moment().format('YYYY/MM/DD-HH:mm:ss')
         }
     }
@@ -64,9 +68,9 @@ const register = (result, fnCallback) => {
 
 //=======================================
 const login = (result, fnCallback) => {
-	var fResp = new FunctionResponse("login", [result, fnCallback]);
+    var fResp = new FunctionResponse("login", [result, fnCallback]);
     var loginParamObj = result.req.body;
-    
+
     var paramsOfLogin = {
         TableName: TableName.USER_TABLE,
         FilterExpression: "email = :email and password = :password",
